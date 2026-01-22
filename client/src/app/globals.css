@@ -1,46 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* Define variables for your beautiful UI */
 :root {
   --bg-color: #050505;
   --accent-blue: 59, 130, 246;
   --accent-purple: 147, 51, 234;
 }
 
-@layer base {
-  body {
-    @apply bg-[#050505] text-white antialiased selection:bg-blue-500/30;
-    min-height: 100vh;
-    /* Animated Mesh Gradient */
-    background: 
-      radial-gradient(at 0% 0%, rgba(var(--accent-blue), 0.15) 0, transparent 40%),
-      radial-gradient(at 100% 0%, rgba(var(--accent-purple), 0.15) 0, transparent 40%),
-      radial-gradient(at 50% 100%, rgba(var(--accent-blue), 0.1) 0, transparent 40%),
-      #050505;
-    background-attachment: fixed;
-  }
+body {
+  background: 
+    radial-gradient(at 0% 0%, rgba(var(--accent-blue), 0.15) 0, transparent 40%),
+    radial-gradient(at 100% 0%, rgba(var(--accent-purple), 0.15) 0, transparent 40%),
+    radial-gradient(at 50% 100%, rgba(var(--accent-blue), 0.1) 0, transparent 40%),
+    var(--bg-color);
+  background-attachment: fixed;
+  color: white; 
+  min-height: 100vh;
 }
 
-@layer components {
-  /* Premium Frosted Glass Effect */
-  .glass-card {
-    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.8)];
-  }
-
-  /* Subtitle/Mono Styling */
-  .status-badge {
-    @apply px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono tracking-widest uppercase text-blue-400;
-  }
+/* Use standard CSS for these classes to avoid 'unknown utility' errors during build */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
 }
 
-/* Custom Scrollbar for a seamless look */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-white/10 rounded-full hover:bg-white/20;
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  font-family: monospace;
+  font-size: 10px;
+  color: #60a5fa;
+  text-transform: uppercase;
 }

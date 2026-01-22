@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ApolloWrapper } from "@/lib/ApolloWrapper";
-import Navbar from "@/components/NavBar";
+// Change NavBar to Navbar (lowercase 'b')
+import Navbar from "@/components/Navbar"; 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
