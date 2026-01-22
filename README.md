@@ -10,7 +10,7 @@
 
 ---
 
-## 🛠️ Technical Stack
+##  Technical Stack
 
 ### Frontend (The Dashboard)
 
@@ -28,7 +28,7 @@
 
 ---
 
-## 🏗️ Architecture Decisions
+##  Architecture Decisions
 
 ### 1. Symmetrical ESM Setup
 
@@ -44,7 +44,7 @@ Instead of over-engineering with Redux, I utilized **React State Lifting**. The 
 
 ---
 
-## 🏃 How to Run Locally
+##  How to Run Locally
 
 ### 1. Clone & Install
 
@@ -83,9 +83,8 @@ npm run dev
 
 ---
 
-## 🎓 About the Developer
+### About the Developer
 
 I am a **Computer Science Master's student at Purdue University Fort Wayne (PFW)**. This project serves as a capstone of my interests in **Web Development (React/Vue)**, **Cloud Architecture (AWS)**, and **Full-Stack Engineering**. It demonstrates my ability to build real-time, AI-integrated systems that handle complex state synchronization.
 
----
 
